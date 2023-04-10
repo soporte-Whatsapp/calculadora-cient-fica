@@ -1,72 +1,29 @@
-import math
+#!/data/data/com.termux/files/usr/bin/python
 
 while True:
-    print("Calculadora científica")
-    print("1. Suma")
-    print("2. Resta")
-    print("3. Multiplicación")
-    print("4. División")
-    print("5. Seno")
-    print("6. Coseno")
-    print("7. Tangente")
-    print("8. Logaritmo")
-    print("9. Raíz cuadrada")
-    print("0. Salir")
+    print("Calculadora\n")
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+    print("5. Salir\n")
 
-    opcion = input("Selecciona una opción: ")
+    opcion = int(input("Selecciona una opción: "))
 
-    if opcion == "1":
-        num1 = float(input("Introduce el primer número: "))
-        num2 = float(input("Introduce el segundo número: "))
-        resultado = num1 + num2
-        print("El resultado es:", resultado)
-
-    elif opcion == "2":
-        num1 = float(input("Introduce el primer número: "))
-        num2 = float(input("Introduce el segundo número: "))
-        resultado = num1 - num2
-        print("El resultado es:", resultado)
-
-    elif opcion == "3":
-        num1 = float(input("Introduce el primer número: "))
-        num2 = float(input("Introduce el segundo número: "))
-        resultado = num1 * num2
-        print("El resultado es:", resultado)
-
-    elif opcion == "4":
-        num1 = float(input("Introduce el primer número: "))
-        num2 = float(input("Introduce el segundo número: "))
-        resultado = num1 / num2
-        print("El resultado es:", resultado)
-
-    elif opcion == "5":
-        angulo = float(input("Introduce el ángulo en grados: "))
-        resultado = math.sin(math.radians(angulo))
-        print("El seno de", angulo, "es:", resultado)
-
-    elif opcion == "6":
-        angulo = float(input("Introduce el ángulo en grados: "))
-        resultado = math.cos(math.radians(angulo))
-        print("El coseno de", angulo, "es:", resultado)
-
-    elif opcion == "7":
-        angulo = float(input("Introduce el ángulo en grados: "))
-        resultado = math.tan(math.radians(angulo))
-        print("La tangente de", angulo, "es:", resultado)
-
-    elif opcion == "8":
-        num = float(input("Introduce el número: "))
-        resultado = math.log10(num)
-        print("El logaritmo de", num, "es:", resultado)
-
-    elif opcion == "9":
-        num = float(input("Introduce el número: "))
-        resultado = math.sqrt(num)
-        print("La raíz cuadrada de", num, "es:", resultado)
-
-    elif opcion == "0":
-        print("Saliendo de la calculadora")
+    if opcion == 5:
         break
 
-    else:
-        print("Opción no válida")
+    num1 = float(input("Ingresa el primer número: "))
+    num2 = float(input("Ingresa el segundo número: "))
+
+    if opcion == 1:
+        resultado = num1 + num2
+    elif opcion == 2:
+        resultado = num1 - num2
+    elif opcion == 3:
+        resultado = num1 * num2
+    elif opcion == 4:
+        resultado = num1 / num2
+
+    print("El resultado es:", resultado, "\n")
+
